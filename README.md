@@ -1,6 +1,6 @@
 # megahr-crossling
 
-This repository contains predictions on concreteness and imageability of words in 78 languages.
+This repository contains predictions on concreteness and imageability of words in 77 languages.
 
 The predictions are based on supervised learning on the [MEGAHR repository](http://megahr.ffzg.hr/) for response variables and [the Facebook cross-lingual word embeddings](https://github.com/Babylonpartners/fastText_multilingual) for explanatory variables.
 
@@ -15,6 +15,6 @@ The experiments identifying the optimal transfer method are described in the pap
 }
 ```
 
-Each of the files contains (word, concreteness prediction, imageability prediction) triples, one per line, with tab-separated values. Both variables were defined in the initial MEGAHR resource on a Likert scale 1--5. The predictions, however, can surpass the limits of this scale.
+Each of the files contains (word, concreteness prediction, imageability prediction) triples, one per line, with tab-separated values. Both variables were defined in the initial MEGAHR resource on a Likert scale from 1 to 5. The predictions, however, can surpass the limits of this scale.
 
-For each language there are three files generated, ```megahr.[lang_code]```, a frequency-sorted file, ```megahr.[lang_code].sort.c```, a concreteness-sorted file, and ```megahr.[lang_code].sort.i```, an imageability-sorted file.
+For each language there are three files generated, ```megahr.[lang_code]```, a file sorted by decreasing word frequency, ```megahr.[lang_code].sort.c```, a file sorted by concretenss predictions, and ```megahr.[lang_code].sort.i```, a file sorted by imageability predictions.
